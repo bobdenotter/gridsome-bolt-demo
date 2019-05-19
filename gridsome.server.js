@@ -18,6 +18,7 @@ module.exports = function (api) {
       route: 'content/:slug'
     })
 
+    // @see https://github.com/gridsome/gridsome/issues/292#issuecomment-483347365
     contentType.addSchemaField('image', () => ({
       type: imageType.type,
       args: imageType.args,
