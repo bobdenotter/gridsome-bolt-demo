@@ -14,10 +14,10 @@
           <div>{{ content.node.extras.excerpt }}</div>
         </div>
 
-        <!-- <div class="content-footer">
-          <div>{{ content.node.publishDate }}</div>
-          <div>By <span v-html="content.node.authors[0].name" /></div>
-        </div> -->
+        <div class="content-footer">
+          <div><small>{{ content.node.publishedAt }}</small></div>
+          <div><small>By <span v-html="content.node.authorName" /></small></div>
+        </div>
       </div>
     </div>
   </Layout>
@@ -31,12 +31,6 @@ query {
         id
         slug
         image (width: 320, height: 240, quality: 80)
-        contentType
-        status
-        createdAt
-        modifiedAt
-        publishedAt
-        depublishedAt
         authorName
         fieldValues {
             slug
@@ -44,9 +38,6 @@ query {
         extras {
           title
           excerpt
-          link
-          name
-          singular_name
         }
       }
     }

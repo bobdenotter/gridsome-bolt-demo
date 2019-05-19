@@ -4,7 +4,9 @@
       <h2>
         <a>{{ $page.boltContent.extras.title }}</a>
       </h2>
-      <em>contentType: {{ $page.boltContent.contentType}}</em>
+      <p>contentType: {{ $page.boltContent.contentType}}</p>
+        <div><small>{{ $page.boltContent.publishedAt }}</small></div>
+        <div><small>By <span v-html="$page.boltContent.authorName" /></small></div>
 
       <div>
         <div class="img-wrapper">
