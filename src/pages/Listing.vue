@@ -8,7 +8,7 @@
 
         <div>
         <div class="img-wrapper">
-            <g-image :src="content.node.image" />
+            <g-image :src="content.node.extras.image.url" />
         </div>
 
           <div>{{ content.node.extras.excerpt }}</div>
@@ -38,6 +38,7 @@ query {
         extras {
           title
           excerpt
+          image { url }
         }
       }
     }

@@ -11,7 +11,7 @@ module.exports = function (api) {
   api.loadSource(async store => {
     const path = require('path')
     const { imageType } = require('gridsome/lib/graphql/types/image')
-    const { data } = await axios.get('http://bolt-four.localhost/api/contents/')
+    const { data } = await axios.get('http://127.0.0.1:8000/api/contents/')
 
     const contentType = store.addContentType({
       typeName: 'BoltContent',

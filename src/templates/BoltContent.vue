@@ -10,7 +10,7 @@
 
       <div>
         <div class="img-wrapper">
-            <g-image :src="$page.boltContent.image" />
+            <g-image :src="$page.boltContent.extras.image.url" />
         </div>
     </div>
 
@@ -23,7 +23,7 @@
 
 <page-query>
 query Content ($id: String!){
-boltContent (id: $id) {
+  boltContent (id: $id) {
     id
     image (width: 720, height: 500, quality: 90)
     slug
@@ -42,6 +42,7 @@ boltContent (id: $id) {
         title
         excerpt
         link
+        image { url }
     }
   }
 }
