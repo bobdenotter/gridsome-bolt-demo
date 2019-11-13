@@ -3,7 +3,7 @@
     <div class="contents">
       <div class="content" v-for="content in $page.allBoltContent.edges" :key="content.node.id">
         <h2>
-          <g-link :to="`content/${content.node.slug}`">{{ content.node.extras.title }}</g-link>
+          <g-link :to="`/content/${content.node.slug}`">{{ content.node.extras.title }}</g-link>
         </h2>
 
         <div>
