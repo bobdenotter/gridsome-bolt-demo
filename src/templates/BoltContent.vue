@@ -7,7 +7,6 @@
       <p>contentType: {{ $page.boltContent.contentType}}</p>
         <div><small>{{ $page.boltContent.publishedAt }}</small></div>
         <div><small>By <span v-html="$page.boltContent.authorName" /></small></div>
-
       <div>
         <div class="img-wrapper">
             <g-image :src="$page.boltContent.extras.image.path" />
